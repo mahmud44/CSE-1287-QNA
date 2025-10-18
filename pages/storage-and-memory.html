@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="storage-and-memory">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Storage and Memory
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Distinguish between Primary and Secondary memory.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Basis of Comparison
+          </th>
+          <th class="border border-slate-400 p-2">
+           Primary Memory
+          </th>
+          <th class="border border-slate-400 p-2">
+           Secondary Memory
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Also Known As
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Main Memory, Internal Memory
+          </td>
+          <td class="border border-slate-400 p-2">
+           Auxiliary Memory, External Memory
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Volatility
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Typically volatile (loses data on power off)
+          </td>
+          <td class="border border-slate-400 p-2">
+           Non-volatile (retains data without power)
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Access Speed
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Very fast
+          </td>
+          <td class="border border-slate-400 p-2">
+           Slower than primary memory
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Cost per Bit
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           High
+          </td>
+          <td class="border border-slate-400 p-2">
+           Low
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Capacity
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Smaller capacity
+          </td>
+          <td class="border border-slate-400 p-2">
+           Larger capacity
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            CPU Accessibility
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Directly accessible by the CPU
+          </td>
+          <td class="border border-slate-400 p-2">
+           Not directly accessible; data is first moved to primary memory
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Examples
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           RAM (Random Access Memory), Cache Memory, ROM
+          </td>
+          <td class="border border-slate-400 p-2">
+           Hard Disk Drive (HDD), Solid State Drive (SSD), CD/DVD, USB Drive
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Explain the difference between volatile and non-volatile memory. Give an example of each type of memory.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The fundamental difference between volatile and non-volatile memory is its ability to retain data when power is removed.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Volatile Memory:
+         </strong>
+         This type of memory requires a constant power supply to maintain the stored information. If the power is interrupted or turned off, all data stored in it is lost. It is generally used for temporary storage of data that the CPU is actively working on because of its high speed.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Example:
+           </strong>
+           RAM (Random Access Memory).
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Non-Volatile Memory:
+         </strong>
+         This type of memory can retain stored information even after the power is turned off. It is used for long-term storage of the operating system, applications, and user files.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Example:
+           </strong>
+           ROM (Read-Only Memory), Hard Disk Drive (HDD), Solid State Drive (SSD), Flash Drives.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Define RAM and ROM.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          RAM (Random Access Memory):
+         </strong>
+         RAM is a form of volatile computer memory that can be read from and written to. It is used by the CPU to store data and program instructions that are currently in use. Because it is volatile, its contents are lost when the computer is turned off. Its "random access" nature means that any byte of memory can be accessed directly without touching the preceding bytes, making it very fast.
+        </li>
+        <li>
+         <strong>
+          ROM (Read-Only Memory):
+         </strong>
+         ROM is a type of non-volatile memory from which data can typically only be read, not written to (or written to with difficulty). It is used to store firmware—software that is closely tied to specific hardware and is unlikely to need frequent updates, such as the computer's BIOS or UEFI, which contains the initial instructions for booting the computer.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Why is RAM called "Random" Access Memory? How is it different from hard disk? Briefly discuss. / Why RAM is called primary memory? Briefly describe.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        RAM is called "Random" Access Memory because any memory location (or address) within it can be accessed directly in a very short and nearly constant amount of time, regardless of its physical position. This is in contrast to sequential access memory (like old magnetic tapes), where data must be read in the order it was stored.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Difference from Hard Disk:
+       </h5>
+       <p>
+        The primary differences between RAM and a hard disk are speed, volatility, and access method.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Speed &amp; Access:
+         </strong>
+         RAM is electronic (solid-state) and allows for direct, random access, making it thousands of times faster than a hard disk. A hard disk is an electromechanical device that involves physically moving read/write heads over spinning magnetic platters, which introduces significant latency (seek time and rotational delay).
+        </li>
+        <li>
+         <strong>
+          Volatility:
+         </strong>
+         RAM is volatile, losing its data when power is off. A hard disk is non-volatile, retaining data permanently.
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        Why RAM is called Primary Memory:
+       </h5>
+       <p>
+        RAM is called primary memory because it is the main working memory of the computer that is directly accessible by the CPU. The CPU can only execute programs and process data that are loaded into primary memory. All data from input devices and secondary storage must be brought into RAM before the CPU can work with it.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. What is Cache memory? Why is it so fast?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Cache memory is a small, extremely fast, and expensive type of volatile memory that is located between the CPU and the main memory (RAM). Its purpose is to store frequently accessed data and instructions from RAM, allowing the CPU to retrieve them much more quickly than if it had to go to RAM every time.
+       </p>
+       <p>
+        Cache memory is so fast for two main reasons:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Proximity to the CPU:
+         </strong>
+         Cache is physically located closer to the CPU core, often on the same chip. This reduces the physical distance data has to travel, significantly lowering latency compared to accessing the separate RAM chips on the motherboard.
+        </li>
+        <li>
+         <strong>
+          Technology Used:
+         </strong>
+         Cache memory is typically built using SRAM (Static RAM) technology. SRAM is much faster than the DRAM (Dynamic RAM) used for main memory because it uses a latching circuit (flip-flops) to store each bit and does not need to be constantly refreshed. DRAM, in contrast, uses a capacitor that leaks charge and must be refreshed thousands of times per second, which slows it down.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. How does 3-level cache organization work between CPU and main memory? Explain with proper diagram briefly. / Why is cached used? Explain the three level cache organizations between CPU and main memory.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Cache is used to bridge the significant speed gap between the very fast CPU and the relatively slow main memory (RAM). By storing frequently used data closer to the CPU, it reduces the average memory access time and improves overall system performance.
+       </p>
+       <p>
+        A 3-level cache organization is a hierarchy of caches with different sizes and speeds:
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Level 1 (L1) Cache:
+         </strong>
+         This is the smallest and fastest cache, located directly on the CPU core. It is often split into an L1 instruction cache (for instructions) and an L1 data cache (for data). When the CPU needs data, it checks the L1 cache first.
+        </li>
+        <li>
+         <strong>
+          Level 2 (L2) Cache:
+         </strong>
+         If the data is not found in L1 (an "L1 miss"), the CPU checks the L2 cache. L2 is larger but slightly slower than L1. It can be private to each CPU core or shared between a few cores.
+        </li>
+        <li>
+         <strong>
+          Level 3 (L3) Cache:
+         </strong>
+         If the data is not in L2 (an "L2 miss"), the CPU checks the L3 cache. L3 is the largest and slowest of the three caches but is still much faster than RAM. It is typically shared among all cores on a single processor chip.
+        </li>
+       </ul>
+       <p>
+        Process Flow:
+        <br/>
+        CPU Request → Check L1 Cache → (if miss) Check L2 Cache → (if miss) Check L3 Cache → (if miss) Fetch from Main Memory (RAM).
+        <br/>
+        When data is fetched from RAM, a copy is placed in all levels of the cache so that subsequent requests for the same data can be served much faster.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       7. Describe how data is stored in (i) Hard disk drive, (ii) CD/DVD ROM.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        (i) Hard Disk Drive (HDD):
+       </h5>
+       <p>
+        An HDD is a magnetic storage device. Data is stored on a series of flat, circular platters coated with a magnetic material. These platters spin at high speeds (e.g., 7200 RPM). A read/write head, attached to an actuator arm, moves across the surface of the spinning platters. Data is stored by magnetizing tiny spots on the platters in a specific direction to represent binary 0s and 1s. To read the data, the head detects the magnetic orientation of these spots.
+       </p>
+       <h5 class="font-semibold mt-4">
+        (ii) CD/DVD ROM:
+       </h5>
+       <p>
+        A CD/DVD is an optical storage device. Data is stored as a series of microscopic indentations, called "pits," and flat areas, called "lands," on a reflective polycarbonate layer. This data track spirals outwards from the center of the disc. A low-powered laser beam inside the drive reads the disc. As the disc spins, the laser reflects off the surface. The light reflects differently from a pit than from a land, and a sensor detects these changes in reflectivity, converting them into the binary data of 0s and 1s.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       8. Which one is faster- SRAM cell or DRAM cell? Explain with appropriate circuit diagrams.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The SRAM (Static RAM) cell is significantly faster than the DRAM (Dynamic RAM) cell.
+       </p>
+       <p>
+        The reason for the speed difference lies in their fundamental design:
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          SRAM Cell:
+         </strong>
+         An SRAM cell uses a flip-flop circuit, typically composed of 6 transistors (6T SRAM), to store a single bit. This circuit acts as a latch, holding its state (0 or 1) as long as power is supplied. It does not require refreshing. Access is very fast because the state can be read directly from the stable latch.
+        </li>
+        <li>
+         <strong>
+          DRAM Cell:
+         </strong>
+         A DRAM cell is much simpler, consisting of a single transistor and a single capacitor. The bit is stored as an electrical charge on the capacitor (charged = 1, discharged = 0). Because the capacitor naturally leaks its charge over time, the cell must be periodically read and rewritten (refreshed) hundreds of times per second to retain its data. This refresh cycle, along with the time it takes to charge/discharge the capacitor, makes DRAM slower than SRAM.
+        </li>
+       </ul>
+       <p>
+        Since diagrams cannot be drawn, the circuits are described textually.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       9. Draw the block diagram of a 6-transistor SRAM cell.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A 6-transistor (6T) SRAM cell consists of two main parts:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          The Storage Latch:
+         </strong>
+         This is the core of the cell, formed by two cross-coupled CMOS inverters. Each inverter is made of two transistors (a PMOS and an NMOS). These two inverters (total of 4 transistors) form a bistable latch that stores one bit of data (either a 0 or a 1).
+        </li>
+        <li>
+         <strong>
+          The Access Transistors:
+         </strong>
+         Two additional NMOS transistors act as switches, connecting the latch to two bit lines (BL and BL-bar). These access transistors are controlled by the word line (WL). When the word line is activated (high), the switches close, allowing the cell to be read from or written to via the bit lines. When the word line is low, the cell is isolated and retains its data.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       10. Mention the significance of memory in embedded programming.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Memory is highly significant and a critical constraint in embedded programming for several reasons:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Resource Constraints:
+         </strong>
+         Embedded systems (like those in microwaves, robots, or IoT devices) are often designed with a minimal amount of RAM and ROM to reduce cost, power consumption, and physical size. Programmers must write highly efficient code to fit within these tight memory limits.
+        </li>
+        <li>
+         <strong>
+          Performance:
+         </strong>
+         Direct memory access is often required for real-time performance. C and C++ are popular in embedded systems because they allow for low-level memory manipulation through pointers, which can be used to directly control hardware registers and peripherals.
+        </li>
+        <li>
+         <strong>
+          Reliability:
+         </strong>
+         In many embedded applications (e.g., automotive or medical devices), system failure is not an option. Proper memory management is crucial to prevent issues like stack overflows or memory leaks that could crash the system.
+        </li>
+        <li>
+         <strong>
+          Memory-Mapped I/O:
+         </strong>
+         In embedded systems, hardware control registers are often mapped directly into the memory address space. Programming involves reading from and writing to specific memory addresses to configure and control hardware components like sensors and motors.
+        </li>
+       </ol>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="preliminaries">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Preliminaries, Program Construction, and Data Types
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. List out the fundamental data types with their range which are used in C. / Describe the data types. List all C data types with bit limitations and memory requirements.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Fundamental data types in C define the type and size of data a variable can hold. The exact size and range can vary by system architecture (e.g., 16-bit vs 64-bit), but typical values are shown below.
+       </p>
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Data Type
+          </th>
+          <th class="border border-slate-400 p-2">
+           Typical Size (bytes)
+          </th>
+          <th class="border border-slate-400 p-2">
+           Typical Range
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           char
+          </td>
+          <td class="border border-slate-400 p-2">
+           1
+          </td>
+          <td class="border border-slate-400 p-2">
+           -128 to 127 or 0 to 255
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           unsigned char
+          </td>
+          <td class="border border-slate-400 p-2">
+           1
+          </td>
+          <td class="border border-slate-400 p-2">
+           0 to 255
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           short int
+          </td>
+          <td class="border border-slate-400 p-2">
+           2
+          </td>
+          <td class="border border-slate-400 p-2">
+           -32,768 to 32,767
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           unsigned short int
+          </td>
+          <td class="border border-slate-400 p-2">
+           2
+          </td>
+          <td class="border border-slate-400 p-2">
+           0 to 65,535
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           int
+          </td>
+          <td class="border border-slate-400 p-2">
+           4
+          </td>
+          <td class="border border-slate-400 p-2">
+           -2,147,483,648 to 2,147,483,647
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           unsigned int
+          </td>
+          <td class="border border-slate-400 p-2">
+           4
+          </td>
+          <td class="border border-slate-400 p-2">
+           0 to 4,294,967,295
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           long int
+          </td>
+          <td class="border border-slate-400 p-2">
+           4 or 8
+          </td>
+          <td class="border border-slate-400 p-2">
+           Varies, typically same as int or long long int
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           unsigned long int
+          </td>
+          <td class="border border-slate-400 p-2">
+           4 or 8
+          </td>
+          <td class="border border-slate-400 p-2">
+           Varies, typically same as unsigned int or unsigned long long int
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           long long int
+          </td>
+          <td class="border border-slate-400 p-2">
+           8
+          </td>
+          <td class="border border-slate-400 p-2">
+           -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           unsigned long long int
+          </td>
+          <td class="border border-slate-400 p-2">
+           8
+          </td>
+          <td class="border border-slate-400 p-2">
+           0 to 18,446,744,073,709,551,615
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           float
+          </td>
+          <td class="border border-slate-400 p-2">
+           4
+          </td>
+          <td class="border border-slate-400 p-2">
+           Approx. 1.2E-38 to 3.4E+38 (6-7 decimal digits precision)
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           double
+          </td>
+          <td class="border border-slate-400 p-2">
+           8
+          </td>
+          <td class="border border-slate-400 p-2">
+           Approx. 2.3E-308 to 1.7E+308 (15-16 decimal digits precision)
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           long double
+          </td>
+          <td class="border border-slate-400 p-2">
+           10, 12, or 16
+          </td>
+          <td class="border border-slate-400 p-2">
+           Higher precision and range than double
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Define keyword and Identifier in C programming. / What is identifier? Find the valid and invalid identifiers from the following: mte. mte16, @ruet, MTE-ruet. / Write the rules of naming identifier of C programming language.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Keyword:
+         </strong>
+         A keyword is a reserved word that has a predefined meaning and purpose in the C language. These words cannot be used as variable names or identifiers. Examples include int, if, else, while, return.
+        </li>
+        <li>
+         <strong>
+          Identifier:
+         </strong>
+         An identifier is a user-defined name given to a variable, function, structure, or other programming entity. It is used to uniquely identify that entity in the program.
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        Rules for Naming Identifiers:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         An identifier can only contain alphanumeric characters (a-z, A-Z, 0-9) and the underscore character (_).
+        </li>
+        <li>
+         The first character of an identifier must be an alphabet (a-z, A-Z) or an underscore (_). It cannot start with a digit.
+        </li>
+        <li>
+         Keywords cannot be used as identifiers.
+        </li>
+        <li>
+         Identifiers are case-sensitive (e.g., myVar and myvar are different).
+        </li>
+        <li>
+         There is no rule on the length of an identifier, but only the first 31 characters are significant to some compilers.
+        </li>
+       </ol>
+       <h5 class="font-semibold mt-4">
+        Validation of given identifiers:
+       </h5>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         mte:
+         <strong>
+          Valid
+         </strong>
+         . Starts with a letter, contains only letters.
+        </li>
+        <li>
+         mte16:
+         <strong>
+          Valid
+         </strong>
+         . Starts with a letter, contains letters and digits.
+        </li>
+        <li>
+         @ruet:
+         <strong>
+          Invalid
+         </strong>
+         . Contains a special character (@) which is not allowed.
+        </li>
+        <li>
+         MTE-ruet:
+         <strong>
+          Invalid
+         </strong>
+         . Contains a hyphen (-) which is not allowed.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Define C tokens with example.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A C token is the smallest individual unit in a C program that is meaningful to the compiler. The C compiler breaks a program down into tokens during the lexical analysis phase.
+       </p>
+       <p>
+        The types of C tokens are:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Keywords:
+         </strong>
+         Reserved words with special meanings (e.g., if, float, for).
+        </li>
+        <li>
+         <strong>
+          Identifiers:
+         </strong>
+         User-defined names for variables, functions, etc. (e.g., main, age, calculateSum).
+        </li>
+        <li>
+         <strong>
+          Constants:
+         </strong>
+         Fixed values that do not change (e.g., 10, 3.14, 'A').
+        </li>
+        <li>
+         <strong>
+          String Literals:
+         </strong>
+         A sequence of characters enclosed in double quotes (e.g., "Hello, World!").
+        </li>
+        <li>
+         <strong>
+          Operators:
+         </strong>
+         Symbols that perform operations (e.g., +, =, ==, &amp;&amp;).
+        </li>
+        <li>
+         <strong>
+          Special Symbols:
+         </strong>
+         Characters with special meanings, like punctuators (e.g., ;, {, }, ()).
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. What is the difference between variable declaration and variable definition? / What do you mean by declaration and definition of a variable?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Declaration:
+         </strong>
+         A declaration introduces a variable's name and type to the compiler. It tells the compiler about the existence of a variable but does not allocate memory for it. A declaration is often used when a variable is defined in another file, using the extern keyword. A variable can be declared multiple times.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: extern int count;
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Definition:
+         </strong>
+         A definition is a declaration that also allocates storage space for the variable. It is where the variable is created. A variable can be defined only once in a program. Most simple variable statements are definitions.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: int count; or int count = 10;
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <p>
+        In C, a statement like int x; inside a function is a definition because it allocates memory on the stack. At the file scope, int x; is a "tentative definition" which becomes a full definition if no other definition is found.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Find errors, if any, in the following declaration statements: Int x; float letter, DIGIT; double exponent alpha, beta; m,n,z: INTEGER; short char c; long int m; count; long float temp; int ROW TOTAL:; Float 3:.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         Int x;:
+         <strong>
+          Error
+         </strong>
+         . Int should be int (C is case-sensitive).
+        </li>
+        <li>
+         float letter, DIGIT;:
+         <strong>
+          Valid
+         </strong>
+         .
+        </li>
+        <li>
+         double $=p,q$:
+         <strong>
+          Error
+         </strong>
+         . $ is not a valid character for an identifier name.
+        </li>
+        <li>
+         exponent alpha, beta;:
+         <strong>
+          Error
+         </strong>
+         . The data type is missing (e.g., float exponent, alpha, beta;).
+        </li>
+        <li>
+         m,n,z: INTEGER;:
+         <strong>
+          Error
+         </strong>
+         . C uses the format type name;, not name: TYPE;. Also, INTEGER is not a standard C type. It should be int m, n, z;.
+        </li>
+        <li>
+         short char c;:
+         <strong>
+          Error
+         </strong>
+         . short cannot be used to modify char. It can modify int.
+        </li>
+        <li>
+         long int m;:
+         <strong>
+          Valid
+         </strong>
+         .
+        </li>
+        <li>
+         count;:
+         <strong>
+          Error
+         </strong>
+         . The data type is missing (e.g., int count;).
+        </li>
+        <li>
+         long float temp;:
+         <strong>
+          Error
+         </strong>
+         . long cannot be used to modify float. Use double or long double.
+        </li>
+        <li>
+         int ROW TOTAL:;:
+         <strong>
+          Error
+         </strong>
+         . Identifier ROW TOTAL contains a space, and there is an extraneous colon. It should be int ROW_TOTAL;.
+        </li>
+        <li>
+         Float 3:;:
+         <strong>
+          Error
+         </strong>
+         . Float should be float, and 3 is not a valid identifier name.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. Distinguish between the following two statements: int varl; and const int var1;.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         int var1;: This statement
+         <strong>
+          defines
+         </strong>
+         a variable named var1 of type int. The value of var1 is mutable, meaning it can be changed at any point in the program after its definition.
+        </li>
+        <li>
+         const int var1;: This statement defines a
+         <strong>
+          constant
+         </strong>
+         variable named var1 of type int. The const qualifier makes the variable read-only. Its value must be initialized at the time of definition (e.g., const int var1 = 10;), and any attempt to modify it later in the program will result in a compilation error.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       7. What is the difference between the following expressions: #define max 52 and const int max 52;.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         #define max 52: This is a
+         <strong>
+          preprocessor directive
+         </strong>
+         . Before compilation, the preprocessor scans the code and replaces every occurrence of the token max with the text 52. This is a simple text substitution. #define macros have no data type and do not respect scope rules.
+        </li>
+        <li>
+         const int max = 52;: This is a
+         <strong>
+          variable definition
+         </strong>
+         . It creates a read-only variable named max of type int with the value 52. This variable has a type, exists in memory, and follows standard scope rules (it is only visible within the block it is defined in). Using const is generally preferred in modern C/C++ as it is type-safe and provides better debugging information.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       8. Define type casting in C. Explain the basic data types of C.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        Type Casting:
+       </h5>
+       <p>
+        Type casting is the process of explicitly converting a value from one data type to another. It is done by placing the desired data type in parentheses before the variable or value to be converted. This is often used to force a certain type of arithmetic or to avoid compiler warnings.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Example:
+         </strong>
+         <pre class="bg-gray-200 p-4 rounded-md"><code>
+int a = 10, b = 4;
+float result = (float)a / b; // result will be 2.5
+// Without the cast, integer division would occur, and the result would be 2.0
+                            </code></pre>
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        Basic Data Types of C:
+       </h5>
+       <p>
+        (See answer to question 1 in this section for a detailed list and description). The basic types are char (for characters), int (for integers), float (for single-precision floating-point numbers), and double (for double-precision floating-point numbers). These can be modified by qualifiers like short, long, signed, and unsigned.
+       </p>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

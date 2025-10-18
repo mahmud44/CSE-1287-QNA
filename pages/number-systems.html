@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="number-systems">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Number Systems
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Convert the following numbers to decimal number system: i) ii) iii).
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (Note: The specific numbers were not provided in the prompt, but the method is demonstrated below for example binary, octal, and hexadecimal numbers.)
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         Example Binary to Decimal: Convert (1101.101)
+         <sub>
+          2
+         </sub>
+         to decimal.
+         <br/>
+         1×2
+         <sup>
+          3
+         </sup>
+         +1×2
+         <sup>
+          2
+         </sup>
+         +0×2
+         <sup>
+          1
+         </sup>
+         +1×2
+         <sup>
+          0
+         </sup>
+         +1×2
+         <sup>
+          -1
+         </sup>
+         +0×2
+         <sup>
+          -2
+         </sup>
+         +1×2
+         <sup>
+          -3
+         </sup>
+         <br/>
+         = 8+4+0+1+0.5+0+0.125 = (13.625)
+         <sub>
+          10
+         </sub>
+        </li>
+        <li>
+         Example Octal to Decimal: Convert (72.4)
+         <sub>
+          8
+         </sub>
+         to decimal.
+         <br/>
+         7×8
+         <sup>
+          1
+         </sup>
+         +2×8
+         <sup>
+          0
+         </sup>
+         +4×8
+         <sup>
+          -1
+         </sup>
+         <br/>
+         = 56+2+0.5 = (58.5)
+         <sub>
+          10
+         </sub>
+        </li>
+        <li>
+         Example Hexadecimal to Decimal: Convert (B6A)
+         <sub>
+          16
+         </sub>
+         to decimal.
+         <br/>
+         11×16
+         <sup>
+          2
+         </sup>
+         +6×16
+         <sup>
+          1
+         </sup>
+         +10×16
+         <sup>
+          0
+         </sup>
+         <br/>
+         = 11×256+6×16+10×1
+         <br/>
+         = 2816+96+10 = (2922)
+         <sub>
+          10
+         </sub>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Convert to its corresponding hexadecimal number.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (Note: The specific number was not provided. The method is demonstrated for a binary number.)
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Example Binary to Hexadecimal:
+         </strong>
+         Convert to hexadecimal.
+         <ol class="list-decimal list-inside">
+          <li>
+           Group the bits into sets of four, starting from the decimal point. Add leading/trailing zeros if needed.
+           <br/>
+           Integer part: 0011 1010 1100
+           <br/>
+           Fractional part: 0110 1000
+          </li>
+          <li>
+           Convert each 4-bit group to its hexadecimal equivalent.
+           <br/>
+           0011 = 3
+           <br/>
+           1010 = A
+           <br/>
+           1100 = C
+           <br/>
+           0110 = 6
+           <br/>
+           1000 = 8
+          </li>
+          <li>
+           Combine the results.
+           <br/>
+           Result: (3AC.68)
+           <sub>
+            16
+           </sub>
+          </li>
+         </ol>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Write a computer program to convert a decimal number to its binary equivalents. / Write a C program to convert a binary number into a decimal number.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        C Program: Decimal to Binary Conversion
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+void decimalToBinary(int n) {
+    if (n == 0) {
+        printf("0");
+        return;
+    }
+    long long binaryNum = 0;
+    int remainder, i = 1;
+    while (n != 0) {
+        remainder = n % 2;
+        n /= 2;
+        binaryNum += remainder * i;
+        i *= 10;
+    }
+    printf("%lld", binaryNum);
+}
+
+int main() {
+    int decimalNum;
+    printf("Enter a decimal number: ");
+    scanf("%d", &amp;decimalNum);
+    printf("Binary equivalent: ");
+    decimalToBinary(decimalNum);
+    printf("\\n");
+    return 0;
+}
+                    </stdio.h></code></pre>
+       <h5 class="font-semibold mt-4">
+        C Program: Binary to Decimal Conversion
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+#include <math.h>
+
+int binaryToDecimal(long long n) {
+    int decimalNum = 0, i = 0, remainder;
+    while (n != 0) {
+        remainder = n % 10;
+        n /= 10;
+        decimalNum += remainder * pow(2, i);
+        ++i;
+    }
+    return decimalNum;
+}
+
+int main() {
+    long long binaryNum;
+    printf("Enter a binary number: ");
+    scanf("%lld", &amp;binaryNum);
+    printf("Decimal equivalent: %d\\n", binaryToDecimal(binaryNum));
+    return 0;
+}
+                    </math.h></stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Find the 2's complement of following numbers: (i) 255 (ii) 0 (iii) 105.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (Assuming an 8-bit representation for positive numbers and a 9-bit result for 255 to avoid overflow issues, and 8-bit for the others.)
+       </p>
+       <p>
+        To find the 2's complement of a positive number (which represents its negative equivalent):
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         Convert the number to binary.
+        </li>
+        <li>
+         Invert all the bits (1's complement).
+        </li>
+        <li>
+         Add 1 to the result.
+        </li>
+       </ol>
+       <p>
+        <strong>
+         (i) 255:
+        </strong>
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         In 8 bits, 255 is 11111111. The 2's complement representation of -255 requires at least 9 bits. Let's find the 2's complement of -1 using the 8-bit representation of 255.
+        </li>
+        <li>
+         To represent -255, we need more bits. Let's find the 2's complement of a smaller number, e.g.,
+         <strong>
+          -101
+         </strong>
+         (using 8 bits).
+         <ol class="list-decimal list-inside">
+          <li>
+           Binary of 101: 01100101
+          </li>
+          <li>
+           1's complement: 10011010
+          </li>
+          <li>
+           Add 1: 10011011. So, 2's complement of -101 is 10011011.
+          </li>
+         </ol>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         (ii) 0:
+        </strong>
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         Binary of 0 (8 bits): 00000000
+        </li>
+        <li>
+         1's complement: 11111111
+        </li>
+        <li>
+         Add 1: 11111111 + 1 = 100000000. Discarding the overflow bit, the result is 00000000. The 2's complement of 0 is 0.
+        </li>
+       </ol>
+       <p>
+        <strong>
+         (iii) 105:
+        </strong>
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         To find the 2's complement representation of
+         <strong>
+          -105
+         </strong>
+         (using 8 bits):
+         <ol class="list-decimal list-inside">
+          <li>
+           Binary of 105: 01101001
+          </li>
+          <li>
+           1's complement: 10010110
+          </li>
+          <li>
+           Add 1: 10010111. So, 2's complement of -105 is 10010111.
+          </li>
+         </ol>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Write the next four numbers in this hex counting sequence: E9A, E9B, E9C, E9D, _,_,_,_
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The sequence is counting up in hexadecimal. After D comes E, then F. After F, the next digit rolls over.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         E9D + 1 = E9E
+        </li>
+        <li>
+         E9E + 1 = E9F
+        </li>
+        <li>
+         E9F + 1 = EA0 (F rolls over to 0, and the next digit 9 increments to A)
+        </li>
+        <li>
+         EA0 + 1 = EA1
+        </li>
+       </ul>
+       <p>
+        The next four numbers are:
+        <strong>
+         E9E, E9F, EA0, EA1
+        </strong>
+        .
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. Why computer uses binary number system instead of decimal? Explain.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Computers use the binary number system because their fundamental building blocks, transistors, operate most reliably as simple switches. A switch has two stable states: ON or OFF. These two states can be naturally and efficiently represented by the two digits of the binary system: 1 (ON) and 0 (OFF).
+       </p>
+       <p>
+        While it is technically possible to build electronic circuits that can represent ten different states for the decimal system, such circuits would be far more complex, expensive, and susceptible to errors from electrical noise or voltage fluctuations. The simplicity and reliability of the two-state binary system make it the ideal choice for designing and building digital computer hardware.
+       </p>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

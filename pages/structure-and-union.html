@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="structure-and-union">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Structure and Union
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Differentiate between structure and union.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           Structure (struct)
+          </th>
+          <th class="border border-slate-400 p-2">
+           Union (union)
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Memory Allocation
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Allocates separate memory space for
+           <strong>
+            each
+           </strong>
+           of its members.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Allocates a
+           <strong>
+            single shared
+           </strong>
+           memory space for
+           <strong>
+            all
+           </strong>
+           its members.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Size
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           The size of a structure is the sum of the sizes of all its members (plus any padding).
+          </td>
+          <td class="border border-slate-400 p-2">
+           The size of a union is the size of its
+           <strong>
+            largest
+           </strong>
+           member.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Value Storage
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Can store values in all its members simultaneously.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Can only store a value in
+           <strong>
+            one
+           </strong>
+           of its members at any given time.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Purpose
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           To group together related data items of different types.
+          </td>
+          <td class="border border-slate-400 p-2">
+           To use a single memory location to store different types of data at different times, saving memory.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Keyword
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           struct
+          </td>
+          <td class="border border-slate-400 p-2">
+           union
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Differentiate between Structure and Array.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           Structure (struct)
+          </th>
+          <th class="border border-slate-400 p-2">
+           Array
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Data Type
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Heterogeneous
+           </strong>
+           . Can contain members of different data types (e.g., int, char, float).
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Homogeneous
+           </strong>
+           . All elements must be of the same data type.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Member Access
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Members are accessed by their names using the dot (.) operator (e.g., student.roll).
+          </td>
+          <td class="border border-slate-400 p-2">
+           Elements are accessed by their integer index using the subscript operator [] (e.g., arr[0]).
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Keyword
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Defined using the struct keyword.
+          </td>
+          <td class="border border-slate-400 p-2">
+           No special keyword; defined by its syntax (e.g., int arr[10];).
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Purpose
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           To represent a record or a single entity with multiple properties.
+          </td>
+          <td class="border border-slate-400 p-2">
+           To store a list or sequence of similar items.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. What is union?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A union is a user-defined data type in C that allows different types of data to be stored in the same memory location. It creates a single shared memory space that is large enough to hold the largest member of the union. The primary purpose of a union is to save memory when a variable needs to store values of different types at different points in a program, but never at the same time.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Define a structure called cricket... write a program to read the information about 50 players and print a teamwise list...
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_PLAYERS 50
+
+// Define the cricket structure
+struct cricket {
+    char playerName[50];
+    char teamName[50];
+    float battingAverage;
+};
+
+int main() {
+    // Declare an array of 50 cricket players
+    struct cricket player[MAX_PLAYERS];
+    int n, i, j;
+    char teams[MAX_PLAYERS][50];
+    int team_count = 0;
+    int is_unique;
+
+    printf("Enter the number of players (up to 50): ");
+    scanf("%d", &amp;n);
+
+    // Read information for n players
+    for (i = 0; i &lt; n; i++) {
+        printf("\\nEnter details for Player %d:\\n", i + 1);
+        printf("Player Name: ");
+        scanf("%s", player[i].playerName);
+        printf("Team Name: ");
+        scanf("%s", player[i].teamName);
+        printf("Batting Average: ");
+        scanf("%f", &amp;player[i].battingAverage);
+    }
+
+    // Find all unique team names
+    for (i = 0; i &lt; n; i++) {
+        is_unique = 1;
+        for (j = 0; j &lt; team_count; j++) {
+            if (strcmp(player[i].teamName, teams[j]) == 0) {
+                is_unique = 0;
+                break;
+            }
+        }
+        if (is_unique) {
+            strcpy(teams[team_count], player[i].teamName);
+            team_count++;
+        }
+    }
+
+    // Print the team-wise list
+    printf("\\n--- Team-wise Player List ---\\n");
+    for (i = 0; i &lt; team_count; i++) {
+        printf("\\nTeam: %s\\n", teams[i]);
+        printf("---------------------------\\n");
+        printf("Player Name\\tBatting Average\\n");
+        for (j = 0; j &lt; n; j++) {
+            if (strcmp(teams[i], player[j].teamName) == 0) {
+                printf("%s\\t\\t%.2f\\n", player[j].playerName, player[j].battingAverage);
+            }
+        }
+    }
+
+    return 0;
+}
+                    </string.h></stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Write a program to store the roll no (starting from 1), name and age of 5 students and then print the details of the student with roll no 2 using structure.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+// Define the student structure
+struct student {
+    int roll_no;
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct student students[5];
+    int i;
+
+    // Store information for 5 students
+    printf("Enter details for 5 students:\\n");
+    for (i = 0; i &lt; 5; i++) {
+        students[i].roll_no = i + 1; // Assign roll number automatically
+        printf("\\nStudent Roll No: %d\\n", students[i].roll_no);
+        printf("Enter Name: ");
+        scanf("%s", students[i].name);
+        printf("Enter Age: ");
+        scanf("%d", &amp;students[i].age);
+    }
+
+    // Find and print the details of the student with roll no 2
+    printf("\\n--- Details of Student with Roll No 2 ---\\n");
+    for (i = 0; i &lt; 5; i++) {
+        if (students[i].roll_no == 2) {
+            printf("Roll No: %d\\n", students[i].roll_no);
+            printf("Name: %s\\n", students[i].name);
+            printf("Age: %d\\n", students[i].age);
+            break; // Exit loop once found
+        }
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="arrays-and-pointers">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Arrays and Pointers
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Define array. What are the limitations of array processing? Explain.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        An
+        <strong>
+         array
+        </strong>
+        is a data structure that stores a collection of elements of the
+        <strong>
+         same data type
+        </strong>
+        in
+        <strong>
+         contiguous memory locations
+        </strong>
+        . Each element can be accessed directly using its index (or subscript).
+       </p>
+       <h5 class="font-semibold mt-4">
+        Limitations of Array Processing:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Fixed Size:
+         </strong>
+         The size of an array is fixed at the time of its declaration and cannot be changed during program execution. This can lead to either wastage of memory (if the array is too large) or insufficient space (if it's too small).
+        </li>
+        <li>
+         <strong>
+          Homogeneous Data Type:
+         </strong>
+         Arrays can only store elements of the same data type. You cannot store a mix of integers, characters, and floats in a single C array.
+        </li>
+        <li>
+         <strong>
+          Costly Insertion and Deletion:
+         </strong>
+         Inserting or deleting an element in the middle of an array is inefficient. It requires shifting all subsequent elements, which is a time-consuming operation, especially for large arrays.
+        </li>
+        <li>
+         <strong>
+          No Bound Checking:
+         </strong>
+         C does not perform automatic bounds checking on arrays. Accessing an element outside the array's bounds (e.g., arr[10] in a 10-element array arr[0...9]) leads to undefined behavior and can corrupt memory or crash the program.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. How 1-D and 2-D array elements are stored in memory? Explain with example.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        1-D Array Storage:
+       </h5>
+       <p>
+        A one-dimensional (1-D) array is stored as a simple linear sequence of elements in contiguous memory locations. If an integer array int arr[4]; starts at memory address 1000, and an int takes 4 bytes, the elements will be stored as follows:
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         arr[0] at address 1000
+        </li>
+        <li>
+         arr[1] at address 1004
+        </li>
+        <li>
+         arr[2] at address 1008
+        </li>
+        <li>
+         arr[3] at address 1012
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        2-D Array Storage:
+       </h5>
+       <p>
+        A two-dimensional (2-D) array is conceptually a grid or table, but in memory, it is flattened and stored as a contiguous block. C uses row-major order for storage. This means that all elements of the first row are stored first, followed by all elements of the second row, and so on.
+       </p>
+       <p>
+        <strong>
+         Example:
+        </strong>
+        For int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}}; starting at address 2000:
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Row 0:
+         </strong>
+         matrix[0][0] (1) at 2000, matrix[0][1] (2) at 2004, matrix[0][2] (3) at 2008
+        </li>
+        <li>
+         <strong>
+          Row 1:
+         </strong>
+         matrix[1][0] (4) at 2012, matrix[1][1] (5) at 2016, matrix[1][2] (6) at 2020
+        </li>
+       </ul>
+       <p>
+        The entire 2x3 array is stored as a single block of 6 integers.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. What is the difference between passing an array to a function and passing a single value data item to a function? Explain briefly with examples.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The key difference is that passing a single value uses
+        <strong>
+         call by value
+        </strong>
+        , while passing an array uses
+        <strong>
+         call by reference
+        </strong>
+        .
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Passing a Single Value (Call by Value):
+         </strong>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           A
+           <strong>
+            copy
+           </strong>
+           of the variable's value is passed to the function.
+          </li>
+          <li>
+           The function works on this copy. Any changes made inside the function
+           <strong>
+            do not affect
+           </strong>
+           the original variable in the calling function.
+          </li>
+          <li>
+           <strong>
+            Example:
+           </strong>
+           <pre class="bg-gray-200 p-4 rounded-md"><code>
+void modifyValue(int x) { x = 100; }
+int main() {
+    int num = 10;
+    modifyValue(num);
+    // Here, num is still 10.
+}
+                                    </code></pre>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Passing an Array (Effectively Call by Reference):
+         </strong>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           When an array is passed to a function, its name "decays" into a
+           <strong>
+            pointer
+           </strong>
+           to its first element.
+          </li>
+          <li>
+           The function receives the memory address of the array. It does not receive a copy of the entire array.
+          </li>
+          <li>
+           Any changes made to the array elements inside the function
+           <strong>
+            will affect
+           </strong>
+           the original array in the calling function because both refer to the same memory locations.
+          </li>
+          <li>
+           <strong>
+            Example:
+           </strong>
+           <pre class="bg-gray-200 p-4 rounded-md"><code>
+void modifyArray(int arr[]) { arr[0] = 100; }
+int main() {
+    int myArr[] = {10, 20, 30};
+    modifyArray(myArr);
+    // Here, myArr[0] is now 100.
+}
+                                    </code></pre>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Differentiate between Array and Strings.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           Array
+          </th>
+          <th class="border border-slate-400 p-2">
+           String (in C)
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Definition
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           A collection of homogeneous elements stored in contiguous memory.
+          </td>
+          <td class="border border-slate-400 p-2">
+           A sequence of characters stored in a char array, terminated by a null character (\0).
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Data Type
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Can be of any data type (int, float, char, struct, etc.).
+          </td>
+          <td class="border border-slate-400 p-2">
+           Specifically an array of type char.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Termination
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Has no special terminator. Its size is known from its declaration.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Must be terminated by the null character (\0) to mark its end.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Library Support
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Basic operations are done manually using loops.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Has a rich set of library functions in
+           <string.h>
+            for manipulation (e.g., strcpy, strlen, strcmp).
+           </string.h>
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Initialization
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           int arr[] = {1, 2, 3};
+          </td>
+          <td class="border border-slate-400 p-2">
+           char str[] = "hello"; (null terminator is added automatically) or char str[] = {'h','e','l','l','o','\0'};
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Define pointer. Write down the disadvantages of it.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A
+        <strong>
+         pointer
+        </strong>
+        is a special type of variable that stores the memory address of another variable. Instead of holding a value like an integer or character, it "points to" the location where a value is stored.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Disadvantages of Pointers:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Complexity:
+         </strong>
+         Pointers can make code harder to understand and reason about, especially with complex pointer arithmetic or multiple levels of indirection (pointer to a pointer).
+        </li>
+        <li>
+         <strong>
+          Security Risks:
+         </strong>
+         Improper use of pointers can lead to serious security vulnerabilities, such as buffer overflows, which can be exploited by malicious code.
+        </li>
+        <li>
+         <strong>
+          Bugs and Errors:
+         </strong>
+         Pointers are a common source of bugs:
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Null Pointer Dereferencing:
+           </strong>
+           Attempting to access the memory location pointed to by a NULL pointer, which causes a program crash.
+          </li>
+          <li>
+           <strong>
+            Dangling Pointers:
+           </strong>
+           A pointer that points to a memory location that has already been deallocated (freed). Using it can lead to unpredictable behavior.
+          </li>
+          <li>
+           <strong>
+            Memory Leaks:
+           </strong>
+           If memory is allocated dynamically using malloc() and not deallocated using free(), the pointer to that memory may be lost, leading to a memory leak where the memory cannot be reclaimed.
+          </li>
+         </ul>
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. What is NULL pointer? Why is it necessary?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A
+        <strong>
+         NULL pointer
+        </strong>
+        is a special pointer value that indicates that the pointer is not pointing to any valid memory address. In C, it is typically defined as (void *)0.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Necessity of NULL Pointers:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Initialization:
+         </strong>
+         It is a good practice to initialize pointers to NULL if they are not being assigned a valid memory address immediately. This prevents them from holding a garbage address.
+        </li>
+        <li>
+         <strong>
+          Error Checking:
+         </strong>
+         Functions that return pointers (e.g., malloc) can return NULL to signal an error or failure (e.g., memory could not be allocated). The calling code can then check for a NULL return value to handle the error gracefully.
+        </li>
+        <li>
+         <strong>
+          Signaling End of Data Structures:
+         </strong>
+         NULL pointers are widely used to mark the end of data structures, such as the next pointer in the last node of a linked list.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       7. Illustrate how pointer works? Use necessary figures.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A pointer works by storing a memory address. Let's illustrate this with a conceptual description.
+       </p>
+       <p>
+        Imagine the computer's memory as a series of numbered boxes, where each number is a memory address.
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         A Regular Variable:
+         <p>
+          When you declare int var = 25;, the computer allocates a box, say at address 1004, and puts the value 25 inside it.
+         </p>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           var (The variable) -&gt; has the value 25
+          </li>
+          <li>
+           &amp;var (Address of var) -&gt; is 1004
+          </li>
+         </ul>
+        </li>
+        <li>
+         A Pointer Variable:
+         <p>
+          When you declare int *ptr;, the computer allocates another box for the pointer itself, say at address 2008. This box is meant to hold an address.
+         </p>
+        </li>
+        <li>
+         Assigning the Address:
+         <p>
+          The statement ptr = &amp;var takes the address of var (which is 1004) and stores this address inside the box for ptr.
+         </p>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           ptr (The pointer) -&gt; has the value 1004
+          </li>
+          <li>
+           &amp;ptr (Address of ptr) -&gt; is 2008
+          </li>
+         </ul>
+        </li>
+        <li>
+         Dereferencing:
+         <p>
+          The * operator (dereference or indirection operator) is used to access the value at the address stored in the pointer.
+         </p>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           *ptr means "go to the address stored in ptr (which is 1004) and get the value from that box".
+          </li>
+          <li>
+           So, *ptr evaluates to 25.
+          </li>
+         </ul>
+        </li>
+       </ol>
+       <p>
+        Modifying *ptr (e.g., *ptr = 50;) would change the value in the box at address 1004, thus changing the value of var to 50.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       8. Distinguish between the following statements. (i) Pointer and Array. (ii) Pointer and String.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        (i) Pointer and Array
+       </h5>
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           Array
+          </th>
+          <th class="border border-slate-400 p-2">
+           Pointer
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Definition
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           A collection of elements of the same type in contiguous memory.
+          </td>
+          <td class="border border-slate-400 p-2">
+           A variable that stores the memory address of another variable.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Nature
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           The array name itself represents a block of memory.
+          </td>
+          <td class="border border-slate-400 p-2">
+           A pointer is a separate variable that holds an address.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Re- assignment
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           An array name is a
+           <strong>
+            constant
+           </strong>
+           pointer; it cannot be reassigned to point to another location. arr =...; is illegal.
+          </td>
+          <td class="border border-slate-400 p-2">
+           A pointer is a
+           <strong>
+            variable
+           </strong>
+           ; it can be reassigned to point to different memory locations. ptr =...; is legal.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            sizeof Operator
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           sizeof(arr) returns the total size of the array in bytes (number of elements * size of one element).
+          </td>
+          <td class="border border-slate-400 p-2">
+           sizeof(ptr) returns the size of the pointer variable itself (typically 4 or 8 bytes), regardless of what it points to.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <h5 class="font-semibold mt-4">
+        (ii) Pointer and String
+       </h5>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         A
+         <strong>
+          string
+         </strong>
+         in C is a char array terminated by a null character (\0). It is a data structure.
+        </li>
+        <li>
+         A
+         <strong>
+          pointer
+         </strong>
+         (specifically a char *) is a variable used to
+         <em>
+          manipulate
+         </em>
+         a string.
+        </li>
+       </ul>
+       <p>
+        The relationship is very close. A string literal like "hello" creates an anonymous, null-terminated character array in memory, and the expression evaluates to a pointer to its first character.
+       </p>
+       <p>
+        Example:
+        <br/>
+        char str_array[] = "hello"; // str_array is an array of 6 chars.
+        <br/>
+        char *str_ptr = "hello"; // str_ptr is a pointer to the first char 'h' of a string literal stored elsewhere (often in read-only memory).
+        <br/>
+        The key difference is that str_array is a mutable array, while str_ptr points to a string literal which should not be modified.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       9. Write a C program to multiply matrix. / Write a C code to multiply two 3x3 matrices.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+#define N 3
+
+int main() {
+    int A[N][N], B[N][N], C[N][N];
+    int i, j, k;
+
+    printf("Enter elements of matrix A (3x3):\\n");
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            scanf("%d", &amp;A[i][j]);
+        }
+    }
+
+    printf("Enter elements of matrix B (3x3):\\n");
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            scanf("%d", &amp;B[i][j]);
+        }
+    }
+
+    // Initialize result matrix C to 0
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            C[i][j] = 0;
+        }
+    }
+
+    // Perform matrix multiplication C = A * B
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            for (k = 0; k &lt; N; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    printf("Resultant matrix C (A * B) is:\\n");
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            printf("%d\\t", C[i][j]);
+        }
+        printf("\\n");
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       10. Write a program in C where a function will add two 2x2 matrices and the matrices will be sent from the 'main() function. Finally return and display the resultant matrix in the main() function.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+#define N 2
+
+// Function to add two matrices.
+// Note: C doesn't allow returning an entire array directly.
+// We pass the result matrix as a parameter to be filled by the function.
+void addMatrices(int A[][N], int B[][N], int C[][N]) {
+    int i, j;
+    for (i = 0; i &lt; N; i++) {
+        for (j = 0; j &lt; N; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+}
+
+int main() {
+    int A[N][N] = {{1, 2}, {3, 4}};
+    int B[N][N] = {{5, 6}, {7, 8}};
+    int C[N][N]; // Resultant matrix
+
+    // Call the function to add matrices
+    addMatrices(A, B, C);
+
+    printf("Resultant matrix C (A + B) is:\\n");
+    for (int i = 0; i &lt; N; i++) {
+        for (int j = 0; j &lt; N; j++) {
+            printf("%d\\t", C[i][j]);
+        }
+        printf("\\n");
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       11. Write a program using C to compute transpose of a matrix.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+#define ROWS 3
+#define COLS 3
+
+int main() {
+    int matrix[ROWS][COLS], transpose[COLS][ROWS];
+    int i, j;
+
+    printf("Enter elements of the matrix (%dx%d):\\n", ROWS, COLS);
+    for (i = 0; i &lt; ROWS; i++) {
+        for (j = 0; j &lt; COLS; j++) {
+            scanf("%d", &amp;matrix[i][j]);
+        }
+    }
+
+    // Compute the transpose
+    for (i = 0; i &lt; ROWS; i++) {
+        for (j = 0; j &lt; COLS; j++) {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+    printf("The transpose of the matrix is:\\n");
+    for (i = 0; i &lt; COLS; i++) {
+        for (j = 0; j &lt; ROWS; j++) {
+            printf("%d\\t", transpose[i][j]);
+        }
+        printf("\\n");
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       12. Write a C program for sorting a one dimensional array in ascending order. / Write C code to store numbers according to descending order.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        Ascending Order (using Bubble Sort):
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int main() {
+    int arr[100], n, i, j, temp;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter %d integers:\\n", n);
+    for (i = 0; i &lt; n; i++) {
+        scanf("%d", &amp;arr[i]);
+    }
+
+    // Bubble sort algorithm for ascending order
+    for (i = 0; i &lt; n - 1; i++) {
+        for (j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                // Swap elements
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Sorted array in ascending order:\\n");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\\n");
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+       <p>
+        <strong>
+         Descending Order:
+        </strong>
+        To sort in descending order, simply change the comparison in the if statement from &gt; to &lt;: if (arr[j] &lt; arr[j + 1]).
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       13. Write a program to read an array of integers using pointer variable. Find the maximum integer from the array elements utilizing pointer.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int main() {
+    int arr[100], n, i;
+    int *ptr;
+    int max;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    ptr = arr; // Point ptr to the beginning of the array
+
+    printf("Enter %d integers:\\n", n);
+    for (i = 0; i &lt; n; i++) {
+        // Read into array using pointer arithmetic
+        scanf("%d", ptr + i);
+    }
+
+    // Assume first element is max
+    max = *ptr;
+
+    // Find maximum using pointer
+    for (i = 1; i &lt; n; i++) {
+        if (*(ptr + i) &gt; max) {
+            max = *(ptr + i);
+        }
+    }
+
+    printf("The maximum element is: %d\\n", max);
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       14. Write a C program to find two elements of an array, whose summation is closer to zero.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+#include <stdlib.h> // For abs()
+#include <limits.h> // For INT_MAX
+
+int main() {
+    int arr[] = {10, -20, 5, 30, -2, 15};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i, j;
+    int min_sum = INT_MAX;
+    int sum;
+    int el1, el2;
+
+    if (n &lt; 2) {
+        printf("Array must have at least two elements.\\n");
+        return 1;
+    }
+
+    for (i = 0; i &lt; n - 1; i++) {
+        for (j = i + 1; j &lt; n; j++) {
+            sum = arr[i] + arr[j];
+            if (abs(sum) &lt; abs(min_sum)) {
+                min_sum = sum;
+                el1 = arr[i];
+                el2 = arr[j];
+            }
+        }
+    }
+
+    printf("The two elements whose sum is closest to zero are %d and %d.\\n", el1, el2);
+    printf("Their sum is %d.\\n", min_sum);
+
+    return 0;
+}
+                    </limits.h></stdlib.h></stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       15. Write a computer program to calculate the standard deviation of an array of values. The array elements are read from the terminal.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n, i;
+    float arr[100];
+    float sum = 0.0, mean = 0.0, std_dev = 0.0;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter %d real numbers:\\n", n);
+    for (i = 0; i &lt; n; ++i) {
+        scanf("%f", &amp;arr[i]);
+        sum += arr[i];
+    }
+
+    // Calculate the mean (average)
+    mean = sum / n;
+
+    // Calculate the sum of squared differences from the mean
+    for (i = 0; i &lt; n; ++i) {
+        std_dev += pow(arr[i] - mean, 2);
+    }
+
+    // Calculate the standard deviation
+    std_dev = sqrt(std_dev / n);
+
+    printf("Standard Deviation = %.6f\\n", std_dev);
+
+    return 0;
+}
+                    </math.h></stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       16. Briefly describe the multi-dimensional array with its initialization in C.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A
+        <strong>
+         multi-dimensional array
+        </strong>
+        is an array of arrays. The most common type is a two-dimensional (2-D) array, which can be visualized as a table or grid with rows and columns. It is used to store data that is naturally represented in a tabular format, like matrices or game boards.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Declaration:
+       </h5>
+       <p>
+        A 2-D array is declared by specifying the data type, name, number of rows, and number of columns.
+        <br/>
+        data_type array_name[ROWS][COLS];
+       </p>
+       <h5 class="font-semibold mt-4">
+        Initialization:
+       </h5>
+       <p>
+        Multi-dimensional arrays can be initialized at the time of declaration. The initial values are enclosed in braces {}. For a 2-D array, each row's values can be enclosed in their own inner set of braces.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Examples:
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+// Method 1: Specifying inner braces for each row (preferred)
+int matrix[2][3] = { {1, 2, 3}, {4, 5, 6} };
+
+// Method 2: Without inner braces (less readable)
+// The elements are assigned row by row.
+int matrix[2][3] = {1, 2, 3, 4, 5, 6};
+
+// Method 3: Omitting the row count (compiler calculates it)
+// The column count must always be specified.
+int matrix[][3] = { {1, 2, 3}, {4, 5, 6} };
+                    </code></pre>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

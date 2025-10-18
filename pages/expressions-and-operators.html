@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="expressions-and-operators">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Expressions and Operators
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. What is binary and unary operator in C? Explain with examples.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Unary Operator:
+         </strong>
+         A unary operator is an operator that works on a single operand.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Examples:
+           </strong>
+           <ul class="list-disc list-inside ml-4">
+            <li>
+             ++ (Increment): ++i; (increments the value of i by 1)
+            </li>
+            <li>
+             -- (Decrement): --i; (decrements the value of i by 1)
+            </li>
+            <li>
+             - (Unary Minus): -x; (negates the value of x)
+            </li>
+            <li>
+             ! (Logical NOT): !flag; (inverts the boolean value of flag)
+            </li>
+            <li>
+             sizeof (Sizeof): sizeof(int); (returns the size of the int type)
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Binary Operator:
+         </strong>
+         A binary operator is an operator that works on two operands. Most operators in C are binary.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Examples:
+           </strong>
+           <ul class="list-disc list-inside ml-4">
+            <li>
+             + (Addition): a + b;
+            </li>
+            <li>
+             * (Multiplication): x * y;
+            </li>
+            <li>
+             &gt; (Greater Than): a &gt; b;
+            </li>
+            <li>
+             &amp;&amp; (Logical AND): (x &gt; 0) &amp;&amp; (y &gt; 0);
+            </li>
+            <li>
+             = (Assignment): a = 5;
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. What is a conditional operator? Can you use conditional operator in place of if...else statement? Show logic behind your answer.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The conditional operator, also known as the ternary operator, is a unique operator in C that takes three operands. Its syntax is:
+        <br/>
+        condition? expression_if_true : expression_if_false;
+       </p>
+       <p>
+        Yes, the conditional operator can be used in place of a simple if...else statement, particularly for assignments.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Logic:
+       </h5>
+       <p>
+        The condition is evaluated first.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         If the condition is true (non-zero), expression_if_true is evaluated, and its result becomes the result of the entire expression.
+        </li>
+        <li>
+         If the condition is false (zero), expression_if_false is evaluated, and its result becomes the result of the entire expression.
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        Example:
+       </h5>
+       <p>
+        Consider the following if...else statement:
+       </p>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+if (x &gt; y) {
+    max = x;
+} else {
+    max = y;
+}
+                    </code></pre>
+       <p>
+        This is logically equivalent to the following statement using the conditional operator:
+       </p>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+max = (x &gt; y)? x : y;
+                    </code></pre>
+       <p>
+        Both achieve the same result: assigning the larger of x and y to the variable max.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Distinguish between the following terms: ii) and iii) "==" and "=" argument.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        ii) a = i++ (Post-increment) vs. a = ++i (Pre-increment)
+       </h5>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         a = i++; (Post-increment): First, the current value of i is assigned to a.
+         <strong>
+          Then
+         </strong>
+         , the value of i is incremented by 1.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: If i is 5, a becomes 5, and i becomes 6.
+          </li>
+         </ul>
+        </li>
+        <li>
+         a = ++i; (Pre-increment): First, the value of i is incremented by 1.
+         <strong>
+          Then
+         </strong>
+         , the new (incremented) value of i is assigned to a.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: If i is 5, i becomes 6, and a also becomes 6.
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h5 class="font-semibold mt-4">
+        iii) == (Equality Operator) vs. = (Assignment Operator)
+       </h5>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         == (Equality Operator): This is a
+         <strong>
+          comparison
+         </strong>
+         operator. It checks if the values of its two operands are equal. It returns a boolean result: 1 (true) if they are equal, and 0 (false) if they are not.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: if (x == 10) checks if the value of x is equal to 10.
+          </li>
+         </ul>
+        </li>
+        <li>
+         = (Assignment Operator): This is an
+         <strong>
+          assignment
+         </strong>
+         operator. It assigns the value of the right-hand operand to the left-hand operand.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           Example: x = 10; assigns the value 10 to the variable x.
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <p>
+        A common programming error is to use = in a condition where == was intended.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Suppose the value of a is 5 and b is 6; what will be the value of a and b after execution of following statements? a++; b; .
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Let's trace the execution step-by-step.
+        <br/>
+        Initial values: a = 5, b = 6.
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         a++;
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           This is a post-increment. The value of a becomes 6.
+          </li>
+          <li>
+           Current state: a = 6, b = 6.
+          </li>
+         </ul>
+        </li>
+        <li>
+         b;
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           This is a statement with no effect. It simply accesses the value of b and does nothing with it.
+          </li>
+          <li>
+           Current state: a = 6, b = 6.
+          </li>
+         </ul>
+        </li>
+        <li>
+         b = (-b) + (b--) + a;
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           This expression has undefined behavior in C because b is modified (b--) and also read (-b) in the same expression without a sequence point. The order of evaluation of (-b) and (b--) is not guaranteed.
+          </li>
+          <li>
+           <strong>
+            However, if we assume a common left-to-right evaluation for the terms:
+           </strong>
+           <ul class="list-disc list-inside ml-4">
+            <li>
+             (-b): The current value of b is 6, so this evaluates to -6.
+            </li>
+            <li>
+             (b--): This is a post-decrement. The current value of b (which is 6) is used in the expression. After its value is used, b is decremented to 5.
+            </li>
+            <li>
+             a: The current value of a is 6.
+            </li>
+            <li>
+             The expression becomes: b = (-6) + (6) + 6;
+            </li>
+            <li>
+             b = 0 + 6;
+            </li>
+            <li>
+             b = 6;
+            </li>
+           </ul>
+          </li>
+          <li>
+           The final value of b from the decrement (b--) is 5, but this is immediately overwritten by the assignment.
+          </li>
+         </ul>
+        </li>
+       </ol>
+       <p>
+        <strong>
+         Final values (assuming one possible evaluation order):
+        </strong>
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         a = 6
+        </li>
+        <li>
+         b = 6
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Find the value of s, p and r if and. (i) (ii) (iii).
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (Note: The expressions are missing. This answer provides a template for solving such problems.)
+       </p>
+       <p>
+        To solve expressions involving operator precedence and associativity, follow these steps:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         Identify all operators in the expression.
+        </li>
+        <li>
+         Follow the C operator precedence rules to determine the order of evaluation (e.g., *, /, % before +, -).
+        </li>
+        <li>
+         If operators have the same precedence, use their associativity rules (e.g., +, -, *, / are left-to-right associative).
+        </li>
+        <li>
+         Evaluate the expression step-by-step, substituting values as you go.
+        </li>
+       </ol>
+       <h5 class="font-semibold mt-4">
+        Example: r = 5 + 3 * 2;
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         Operators are + and *.
+        </li>
+        <li>
+         * has higher precedence than +.
+        </li>
+        <li>
+         Evaluate 3 * 2 first, which is 6.
+        </li>
+        <li>
+         The expression becomes r = 5 + 6;.
+        </li>
+        <li>
+         Evaluate 5 + 6, which is 11.
+        </li>
+        <li>
+         r becomes 11.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. Determine the value of each expression: (i) (ii).
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (Note: The expressions are missing. See the method outlined in the answer to question 5 above.)
+       </p>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

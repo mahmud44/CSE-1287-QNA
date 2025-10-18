@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="io-statements">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Input/Output (I/O) Statements
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. State the limitation of using scanf function for reading strings. How can you overcome it?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The primary limitation of using scanf("%s", str); for reading strings is that it
+        <strong>
+         stops reading at the first whitespace character
+        </strong>
+        (space, tab, or newline). This makes it unsuitable for reading strings that contain spaces, such as a full name or a sentence.
+       </p>
+       <p>
+        This limitation can be overcome in several ways:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Using fgets():
+         </strong>
+         This is the recommended and safest method. fgets(str, size, stdin); reads an entire line of input, including spaces, until a newline character is read or the specified size limit is reached. It also prevents buffer overflows.
+        </li>
+        <li>
+         <strong>
+          Using scanf with a modified format specifier:
+         </strong>
+         You can use scanf("%[^\n]s", str);. This tells scanf to read all characters until a newline (\n) is encountered. However, this method is still risky as it does not have built-in protection against buffer overflows.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. What is the significance of gets and puts function?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         gets(char *str): The purpose of gets() is to read a line of text from the standard input (stdin) and store it in the string str. It reads characters until a newline character is encountered, which is then discarded.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Significance/Warning:
+           </strong>
+           While simple to use, gets() is
+           <strong>
+            extremely dangerous and has been deprecated
+           </strong>
+           . It performs no bounds checking, meaning it will continue to write past the end of the buffer if the input is too long, leading to buffer overflow vulnerabilities. It should
+           <strong>
+            never
+           </strong>
+           be used in modern code.
+          </li>
+         </ul>
+        </li>
+        <li>
+         puts(const char *str): The purpose of puts() is to write a string to the standard output (stdout).
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Significance:
+           </strong>
+           It is a simple and efficient way to print a string. After printing the entire string, puts() automatically appends a newline character (\n) to the output, which is often convenient.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Distinguish between the following terms i) printf and printf.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         printf: The printf function writes formatted output to the
+         <strong>
+          standard output stream (stdout)
+         </strong>
+         , which is typically the console or terminal screen.
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Syntax:
+           </strong>
+           int printf(const char *format,...);
+          </li>
+          <li>
+           <strong>
+            Usage:
+           </strong>
+           Used for general output to the user.
+          </li>
+         </ul>
+        </li>
+        <li>
+         printf: The printf function writes formatted output to a
+         <strong>
+          specified file stream
+         </strong>
+         . This stream could be a file on the disk, or standard streams like stdout or stderr (standard error).
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Syntax:
+           </strong>
+           int printf(FILE *stream, const char *format,...);
+          </li>
+          <li>
+           <strong>
+            Usage:
+           </strong>
+           Used for writing to files or for directing output to specific streams, such as sending error messages to stderr instead of stdout. printf(...) is functionally equivalent to printf(stdout,...).
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

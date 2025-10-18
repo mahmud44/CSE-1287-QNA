@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="recursion">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Recursion
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Define recursion.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Recursion is a programming technique where a function calls itself, either directly or indirectly, in order to solve a problem. A recursive function breaks a problem down into smaller, similar subproblems until it reaches a simple base case that can be solved directly without further recursion.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Write a C program to find factorial of a number using recursion. / Write down a C program to find the factorial of n by using recursion, n is a positive integer.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+long long factorial(int n) {
+    // Base case: factorial of 0 or 1 is 1
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    // Recursive step: n * factorial of (n-1)
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", #);
+
+    if (num &lt; 0) {
+        printf("Factorial is not defined for negative numbers.\\n");
+    } else {
+        printf("Factorial of %d = %lld\\n", num, factorial(num));
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Write a C program to calculate Fibonacci series using recursion. The Fibonacci series looks like 0,1,1,2,3,5,8,13...
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+// Function to find the nth Fibonacci number
+int fibonacci(int n) {
+    // Base cases
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    // Recursive step
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n, i;
+    printf("Enter the number of terms for Fibonacci series: ");
+    scanf("%d", &amp;n);
+
+    printf("Fibonacci Series: ");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    printf("\\n");
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+       <p>
+        *(Note: This recursive solution for Fibonacci is elegant but highly inefficient for larger n due to repeated calculations.)*
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Write a program using recursive function to print Fibonacci Series.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        (The code provided in the answer to question 3 serves this purpose.)
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Write a C program to find the sum of 1 to N using recursion. Here N is user input value.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int sumOfN(int n) {
+    // Base case
+    if (n == 1) {
+        return 1;
+    }
+    // Recursive step
+    return n + sumOfN(n - 1);
+}
+
+int main() {
+    int num;
+    printf("Enter a positive integer N: ");
+    scanf("%d", #);
+
+    if (num &lt;= 0) {
+        printf("Please enter a positive integer.\\n");
+    } else {
+        printf("Sum of numbers from 1 to %d is: %d\\n", num, sumOfN(num));
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. What is base case in recursion? Why does stack overflow occur in recursion? Explain with suitable example.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        Base Case:
+       </h5>
+       <p>
+        The base case (or terminating condition) is the part of a recursive function that does not make a further recursive call. It is the simplest version of the problem that can be solved directly. A base case is essential to prevent the recursion from continuing indefinitely.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Stack Overflow:
+       </h5>
+       <p>
+        When a function is called, an activation record (containing its local variables, parameters, and return address) is pushed onto the call stack. In recursion, each recursive call pushes a new record onto the stack.
+       </p>
+       <p>
+        A
+        <strong>
+         stack overflow
+        </strong>
+        occurs when the recursive calls are too deep, and the call stack runs out of its allocated memory space. This happens when the recursion does not stop, which is typically caused by one of two things:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Missing Base Case:
+         </strong>
+         The function has no condition to stop calling itself.
+        </li>
+        <li>
+         <strong>
+          Incorrect Base Case:
+         </strong>
+         The recursive calls never converge to the base case.
+        </li>
+       </ol>
+       <h5 class="font-semibold mt-4">
+        Example: A factorial function without a base case.
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+int faultyFactorial(int n) {
+    // Missing base case: if (n == 0) return 1;
+    return n * faultyFactorial(n - 1);
+}
+
+int main() {
+    // Calling faultyFactorial(5) will lead to:
+    // 5 * faultyFactorial(4)
+    // 5 * 4 * faultyFactorial(3)
+    //...
+    //... * faultyFactorial(0)
+    //... * faultyFactorial(-1)
+    //... and so on, never stopping.
+    // Eventually, the call stack will be exhausted, causing a stack overflow error.
+    faultyFactorial(5);
+    return 0;
+}
+                    </code></pre>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

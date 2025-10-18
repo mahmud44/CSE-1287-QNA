@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="programming-language-levels">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Programming Language Levels
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. What are the differences between high-level and low-level languages?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           High-Level Language (HLL)
+          </th>
+          <th class="border border-slate-400 p-2">
+           Low-Level Language (LLL)
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Abstraction
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           High level of abstraction from hardware.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Little to no abstraction from hardware.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Human Readability
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Easy to read, write, and understand (e.g., Python, Java).
+          </td>
+          <td class="border border-slate-400 p-2">
+           Difficult to read and understand (e.g., Assembly, Machine Code).
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Portability
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Highly portable; can run on different machine architectures.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Machine-dependent; not portable.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Execution Speed
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Generally slower due to translation overhead.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Very fast execution as it is closer to the hardware.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Memory Management
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Often managed automatically (e.g., garbage collection).
+          </td>
+          <td class="border border-slate-400 p-2">
+           Requires manual memory management by the programmer.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Ease of Debugging
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Easier to debug.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Difficult and time-consuming to debug.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Explain the machine language and assembly language.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Machine Language:
+         </strong>
+         This is the lowest-level programming language, consisting of binary digits (0s and 1s). It is the only language that a computer's CPU can directly understand and execute. Each instruction in machine language corresponds to a specific operation the CPU can perform. It is extremely difficult for humans to read or write.
+        </li>
+        <li>
+         <strong>
+          Assembly Language:
+         </strong>
+         This is a low-level language that provides a symbolic representation of machine language instructions. It uses mnemonics (short, English-like words) like MOV, ADD, SUB to represent machine code operations, making it more readable than binary. An assembler program is required to translate assembly code into machine code. While easier than machine language, it is still hardware-dependent and requires a deep understanding of the computer's architecture.
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Explain "Assembly languages are difficult to code complex logics compared to high level languages".
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        This statement is true because assembly language lacks the high-level abstractions that simplify complex programming.
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Lack of Control Structures:
+         </strong>
+         High-level languages provide built-in constructs like if-else, for, and while loops. In assembly, these must be manually constructed using conditional jumps (JMP, JE) and labels, which is tedious and error-prone for complex logic.
+        </li>
+        <li>
+         <strong>
+          Manual Resource Management:
+         </strong>
+         The programmer must manually manage CPU registers, memory allocation, and the call stack. This adds a significant layer of complexity compared to high-level languages where the compiler or runtime handles these details.
+        </li>
+        <li>
+         <strong>
+          Verbosity:
+         </strong>
+         A single, simple operation in a high-level language (e.g., c = a + b) can translate into multiple lines of assembly code (load a into a register, load b into another, add them, store the result). This verbosity makes the overall program structure for complex logic very difficult to follow.
+        </li>
+        <li>
+         <strong>
+          No Data Structures:
+         </strong>
+         High-level languages have built-in support for complex data structures like arrays, structs, and objects. In assembly, these must be implemented from scratch using basic memory addressing.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. "C is a mid level language". Explain.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        C is often called a middle-level language because it bridges the gap between high-level and low-level languages. It provides features of both, offering a unique balance of power and abstraction.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          High-Level Features:
+         </strong>
+         C includes high-level constructs that make programming easier and more structured, such as functions, loops (for, while), decision-making statements (if, switch), and data structures (struct).
+        </li>
+        <li>
+         <strong>
+          Low-Level Features:
+         </strong>
+         C also provides direct access to the system's memory through pointers. It allows for pointer arithmetic, bitwise manipulation, and direct interaction with hardware addresses. These are features typically found in low-level languages like assembly and are essential for system programming, driver development, and embedded systems.
+        </li>
+       </ul>
+       <p>
+        This combination allows programmers to write efficient, high-performance code with fine-grained control over hardware, while still benefiting from the readability and structure of a high-level language.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. What are the parameters for choosing a programming language?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The choice of a programming language for a project depends on several critical parameters:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Problem Domain:
+         </strong>
+         The nature of the application is paramount. For web development, languages like JavaScript or Python are common. For scientific computing, Fortran or Python with libraries like NumPy are used. For systems programming, C or C++ is preferred.
+        </li>
+        <li>
+         <strong>
+          Performance Requirements:
+         </strong>
+         If the application requires high speed and efficiency (e.g., game engines, operating systems), languages like C++ or Rust are chosen. For applications where development speed is more critical, interpreted languages like Python or Ruby may be better.
+        </li>
+        <li>
+         <strong>
+          Platform/Target Environment:
+         </strong>
+         The language must be compatible with the target operating system (Windows, macOS, Linux) or hardware (e.g., embedded microcontrollers).
+        </li>
+        <li>
+         <strong>
+          Ecosystem and Libraries:
+         </strong>
+         The availability of robust libraries, frameworks, and tools can significantly speed up development.
+        </li>
+        <li>
+         <strong>
+          Developer Expertise and Team Skills:
+         </strong>
+         The team's familiarity with a language is a major factor in productivity and code quality.
+        </li>
+        <li>
+         <strong>
+          Scalability and Maintainability:
+         </strong>
+         The language should support writing code that is easy to maintain, debug, and scale as the project grows.
+        </li>
+        <li>
+         <strong>
+          Community Support:
+         </strong>
+         A large and active community ensures better documentation, help with problem-solving, and a steady supply of updated tools.
+        </li>
+       </ol>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

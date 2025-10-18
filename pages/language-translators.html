@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="language-translators">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Language Translators
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Describe the differences between compiler and interpreter. / Differentiate between compiler and interpreter. / Distinguish between compiler and interpreter.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Basis of Comparison
+          </th>
+          <th class="border border-slate-400 p-2">
+           Compiler
+          </th>
+          <th class="border border-slate-400 p-2">
+           Interpreter
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Translation Process
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Translates the entire source code into machine code at once, before execution.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Translates and executes the source code line-by-line.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Output
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Creates a standalone executable file (object code).
+          </td>
+          <td class="border border-slate-400 p-2">
+           Does not produce an executable file.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Execution Speed
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Faster, because the code is already translated into machine code.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Slower, because translation happens during execution for each line.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Error Reporting
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           Reports all syntax errors at the end of the compilation process.
+          </td>
+          <td class="border border-slate-400 p-2">
+           Reports the first error it encounters and stops execution.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Platform Dependency
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           The generated object code is specific to a machine architecture.
+          </td>
+          <td class="border border-slate-400 p-2">
+           More portable, as the source code can run on any machine with the interpreter installed.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Requirement
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           The compiler is only needed during the development phase.
+          </td>
+          <td class="border border-slate-400 p-2">
+           The interpreter must be present on the target machine every time the program is run.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Examples
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           C, C++, Java (compiles to bytecode)
+          </td>
+          <td class="border border-slate-400 p-2">
+           Python, JavaScript, Ruby
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Distinguish between Source code &amp; Object code. / Define source code and object code. / What is a source Program? An object program? Why are these concepts important?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Source Code (Source Program):
+         </strong>
+         This is the program code written by a human programmer in a high-level or assembly language. It is human-readable and consists of text, instructions, and comments. For example, a .c file contains source code.
+        </li>
+        <li>
+         <strong>
+          Object Code (Object Program):
+         </strong>
+         This is the machine-readable code produced by a compiler or an assembler after translating the source code. It consists of binary or low-level instructions that the CPU can understand. It is not easily readable by humans. For example, a .o or .obj file contains object code.
+        </li>
+       </ul>
+       <p>
+        Importance:
+        <br/>
+        These concepts are fundamental to the process of software development. The distinction represents the translation from a human-friendly abstraction (source code) to a machine-executable reality (object code). This separation allows programmers to work in powerful, abstract languages without needing to know the intricate details of the underlying hardware. The object code is what is ultimately linked with libraries to create a final executable program.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. What is compiler? Explain the front-end and back-end phases of compiler in brief.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A compiler is a special program that translates source code written in a high-level programming language (like C++ or Java) into a lower-level language (like assembly or machine code), creating an executable program.
+       </p>
+       <p>
+        The compilation process is broadly divided into two main phases:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Front-End (Analysis Phase):
+         </strong>
+         This phase deals with the source language. It reads the source code, checks it for syntactic and semantic correctness, and generates an intermediate representation (IR) of the code. It is independent of the target machine. Its main stages are:
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Lexical Analysis:
+           </strong>
+           Breaks the source code into a stream of tokens (keywords, identifiers, etc.).
+          </li>
+          <li>
+           <strong>
+            Syntax Analysis (Parsing):
+           </strong>
+           Checks if the tokens form a valid sequence according to the language's grammar and builds a parse tree.
+          </li>
+          <li>
+           <strong>
+            Semantic Analysis:
+           </strong>
+           Checks for logical errors, such as type mismatches.
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Back-End (Synthesis Phase):
+         </strong>
+         This phase takes the intermediate representation from the front-end and generates the target machine code. It is dependent on the target machine's architecture. Its main stages are:
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Code Optimization:
+           </strong>
+           Improves the intermediate code to make the final program faster and more memory-efficient.
+          </li>
+          <li>
+           <strong>
+            Code Generation:
+           </strong>
+           Translates the optimized intermediate code into the target machine language.
+          </li>
+         </ul>
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. "Interpreter is a program that can execute high level language programs directly." Explain this statement.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        This statement is a common simplification. An interpreter does not allow the hardware to execute high-level language programs "directly." The CPU can only execute machine code.
+       </p>
+       <p>
+        What the statement means is that an interpreter
+        <strong>
+         interleaves translation and execution
+        </strong>
+        , giving the appearance of direct execution. The process is as follows:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         The interpreter, which is itself an executable program, reads one line or statement of the high-level source code.
+        </li>
+        <li>
+         It analyzes that line and translates it into the corresponding machine code instructions.
+        </li>
+        <li>
+         It immediately executes those machine code instructions.
+        </li>
+        <li>
+         It then moves to the next line of the source code and repeats the process.
+        </li>
+       </ol>
+       <p>
+        So, unlike a compiler which creates a separate executable file, the interpreter acts as a runtime environment that processes the source code on-the-fly. The user experiences a direct execution model because there is no separate compilation step.
+       </p>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

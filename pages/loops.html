@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="loops">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Loops
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. Differentiate between while and do-while loop in C. / How does while loop differ from a 'do... while loop? Briefly explain with suitable examples. / Write down the difference between following terms: While and do-while statement.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The primary difference between a while loop and a do-while loop is when the loop condition is checked.
+       </p>
+       <table class="border-collapse border border-slate-500">
+        <thead>
+         <tr>
+          <th class="border border-slate-400 p-2">
+           Feature
+          </th>
+          <th class="border border-slate-400 p-2">
+           while Loop
+          </th>
+          <th class="border border-slate-400 p-2">
+           do-while Loop
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Control Type
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Entry-Controlled Loop
+           </strong>
+           or
+           <strong>
+            Pre-test Loop
+           </strong>
+           .
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Exit-Controlled Loop
+           </strong>
+           or
+           <strong>
+            Post-test Loop
+           </strong>
+           .
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Condition Check
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           The condition is checked
+           <strong>
+            before
+           </strong>
+           executing the loop body.
+          </td>
+          <td class="border border-slate-400 p-2">
+           The condition is checked
+           <strong>
+            after
+           </strong>
+           executing the loop body.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Minimum Executions
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Zero or more times.
+           </strong>
+           If the condition is initially false, the loop body never executes.
+          </td>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            One or more times.
+           </strong>
+           The loop body is guaranteed to execute at least once.
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Syntax
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           while (condition) { // body }
+          </td>
+          <td class="border border-slate-400 p-2">
+           do { // body } while (condition);
+          </td>
+         </tr>
+         <tr>
+          <td class="border border-slate-400 p-2">
+           <strong>
+            Semicolon Usage
+           </strong>
+          </td>
+          <td class="border border-slate-400 p-2">
+           No semicolon after the while (condition).
+          </td>
+          <td class="border border-slate-400 p-2">
+           A semicolon is required after the while (condition).
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <h5 class="font-semibold mt-4">
+        Example while loop:
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+int i = 5;
+while (i &lt; 5) {
+    printf("This will not be printed.\\n"); // Body does not execute
+    i++;
+}
+                    </code></pre>
+       <h5 class="font-semibold mt-4">
+        Example do-while loop:
+       </h5>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+int i = 5;
+do {
+    printf("This will be printed once.\\n"); // Body executes once
+    i++;
+} while (i &lt; 5);
+                    </code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Give example and application where "while" loop is better than "do while" loop. / In which situation you will prefer do-while loop over for or while loop? Justify your answer.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A
+        <strong>
+         while loop
+        </strong>
+        is better when you need to check a condition
+        <em>
+         before
+        </em>
+        performing any action, and it's possible that the action should not be performed at all.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Application:
+         </strong>
+         Reading from a file. You should check if you have reached the end of the file
+         <em>
+          before
+         </em>
+         attempting to read the next line.
+         <pre class="bg-gray-200 p-4 rounded-md"><code>
+while (fgets(buffer, sizeof(buffer), file) != NULL) {
+    // Process the line in the buffer
+}
+                            </code></pre>
+        </li>
+       </ul>
+       <p>
+        You would prefer a
+        <strong>
+         do-while loop
+        </strong>
+        when the loop body must execute at least once, regardless of the condition.
+       </p>
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          Justification:
+         </strong>
+         This pattern is common in situations that require an initial action before a condition can be tested.
+        </li>
+        <li>
+         <strong>
+          Application:
+         </strong>
+         A menu-driven program or user input validation. You must first display the menu or prompt for input
+         <em>
+          at least once
+         </em>
+         before you can check if the user wants to exit or if the input is valid.
+         <pre class="bg-gray-200 p-4 rounded-md"><code>
+char choice;
+do {
+    printf("Menu:\\n1. Option A\\n2. Option B\\n3. Exit\\n");
+    printf("Enter your choice: ");
+    scanf(" %c", &amp;choice);
+    // Process choice...
+} while (choice != '3');
+                            </code></pre>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. What are the differences between 'break' and 'continue'? / Distinguish between 'break' and 'continue" statement with appropriate examples.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <ul class="list-disc list-inside ml-4">
+        <li>
+         <strong>
+          break Statement:
+         </strong>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Function:
+           </strong>
+           It immediately
+           <strong>
+            terminates
+           </strong>
+           the entire loop (or switch statement) it is in.
+          </li>
+          <li>
+           <strong>
+            Behavior:
+           </strong>
+           Control passes to the first statement following the loop.
+          </li>
+          <li>
+           <strong>
+            Example:
+           </strong>
+           Print numbers from 1 to 10, but stop if the number is 5.
+           <pre class="bg-gray-200 p-4 rounded-md"><code>
+for (int i = 1; i &lt;= 10; i++) {
+    if (i == 5) {
+        break; // Exits the for loop completely
+    }
+    printf("%d ", i);
+}
+// Output: 1 2 3 4
+                                    </code></pre>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          continue Statement:
+         </strong>
+         <ul class="list-disc list-inside ml-4">
+          <li>
+           <strong>
+            Function:
+           </strong>
+           It
+           <strong>
+            skips
+           </strong>
+           the rest of the current iteration of the loop.
+          </li>
+          <li>
+           <strong>
+            Behavior:
+           </strong>
+           The loop does not terminate. Instead, control passes to the beginning of the next iteration (the condition is re-evaluated).
+          </li>
+          <li>
+           <strong>
+            Example:
+           </strong>
+           Print numbers from 1 to 10, but skip the number 5.
+           <pre class="bg-gray-200 p-4 rounded-md"><code>
+for (int i = 1; i &lt;= 10; i++) {
+    if (i == 5) {
+        continue; // Skips the printf for this iteration
+    }
+    printf("%d ", i);
+}
+// Output: 1 2 3 4 6 7 8 9 10
+                                    </code></pre>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Why 'goto' statement is discouraged to use?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        The goto statement is discouraged in modern programming because it promotes the creation of unstructured code, often referred to as "spaghetti code." This leads to several significant problems:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Poor Readability:
+         </strong>
+         goto allows for arbitrary jumps within a function, making the flow of control difficult to follow. This makes the code hard to read and understand.
+        </li>
+        <li>
+         <strong>
+          Difficult to Debug:
+         </strong>
+         Tracing the execution path in code with multiple goto statements is a nightmare, making it extremely difficult to find and fix bugs.
+        </li>
+        <li>
+         <strong>
+          Maintenance Issues:
+         </strong>
+         Unstructured code is hard to modify or extend without introducing new bugs.
+        </li>
+        <li>
+         <strong>
+          Violation of Structured Programming Principles:
+         </strong>
+         Structured programming is based on the principles of sequence, selection (if/switch), and iteration (while/for), which create programs with a clear, predictable, single-entry, single-exit flow. goto breaks this principle.
+        </li>
+       </ol>
+       <p>
+        While there are very rare, specific cases where goto might be used (e.g., breaking out of deeply nested loops in C), these can almost always be solved with better program design.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. Write a C program to find out the prime numbers between 0 to 100. / Write a C program to find the prime numbers between 1-100.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int main() {
+    int i, j, isPrime;
+
+    printf("Prime numbers between 1 and 100 are:\\n");
+
+    // Loop through each number from 2 to 100
+    for (i = 2; i &lt;= 100; i++) {
+        isPrime = 1; // Assume the number is prime initially
+
+        // Check for factors from 2 up to i/2
+        for (j = 2; j &lt;= i / 2; j++) {
+            if (i % j == 0) {
+                isPrime = 0; // Found a factor, so not prime
+                break;       // No need to check further
+            }
+        }
+
+        // If isPrime is still 1, then the number is prime
+        if (isPrime == 1) {
+            printf("%d ", i);
+        }
+    }
+    printf("\\n");
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       6. Write a C program to find the number and sum of all integers greater than 100 and less than 200 those are divisible by 7.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0, count = 0;
+
+    for (i = 101; i &lt; 200; i++) {
+        if (i % 7 == 0) {
+            sum += i;  // Add the number to the sum
+            count++;   // Increment the count
+        }
+    }
+
+    printf("The numbers between 100 and 200 divisible by 7 are:\\n");
+    for (i = 101; i &lt; 200; i++) {
+        if (i % 7 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\\n\\n");
+
+    printf("Total count of such numbers: %d\\n", count);
+    printf("Sum of these numbers: %d\\n", sum);
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       7. Define nested loop. Write a C code that will take a string (KLMNAYZ) as input and the output will be reverse of it (ZYANMLK).
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        A
+        <strong>
+         nested loop
+        </strong>
+        is a loop that is placed inside the body of another loop. The inner loop is executed completely for each single iteration of the outer loop. This structure is commonly used for working with two-dimensional data, like matrices, or for creating patterns.
+       </p>
+       <h5 class="font-semibold mt-4">
+        C Code to Reverse a String:
+       </h5>
+       <p>
+        (Note: A nested loop is not the efficient way to reverse a string. A single loop is sufficient. The following code provides a standard single-loop solution as it's the correct way to solve the problem.)
+       </p>
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], temp;
+    int i, j;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    i = 0;
+    j = strlen(str) - 1;
+
+    // A single loop is used to swap characters from the ends towards the center
+    while (i &lt; j) {
+        // Swap characters
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+
+        i++;
+        j--;
+    }
+
+    printf("The reversed string is: %s\\n", str);
+
+    return 0;
+}
+                    </string.h></stdio.h></code></pre>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       8. Write a C program to produce the following form of Floyd's triangle: 1/01/101/0101.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <pre class="bg-gray-200 p-4 rounded-md"><code>
+#include <stdio.h>
+
+int main() {
+    int rows = 4; // Number of rows to print
+    int i, j, k = 1;
+
+    printf("Floyd's Triangle (binary pattern):\\n");
+
+    for (i = 1; i &lt;= rows; i++) {
+        for (j = 1; j &lt;= i; j++) {
+            // Use modulo 2 to alternate between 1 and 0
+            if ((i + j) % 2 == 0) {
+                printf("1");
+            } else {
+                printf("0");
+            }
+        }
+        printf("\\n"); // Move to the next line after each row
+    }
+
+    return 0;
+}
+                    </stdio.h></code></pre>
+       <p>
+        *(Note: The question's output 1/01/101/0101 seems to use / as a separator. The code above uses newlines, which is standard for triangles. If / is required, printf("\\n"); can be changed to if (i &lt; rows) printf("/");)*
+       </p>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CSE 1287 QnA Solution
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-slate-50 font-sans flex h-screen text-slate-900">
+  <!-- Sidebar -->
+  <aside class="bg-slate-900 text-slate-200 w-64 min-h-screen p-4 fixed md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex-shrink-0" id="sidebar">
+   <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-white">
+     CSE 1287 QnA
+    </h2>
+    <button class="md:hidden" id="sidebar-close">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="sidebar">
+    <ul>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part I: Computer Fundamentals
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="core-computer-organization.html">
+       a. Core Computer Organization
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="storage-and-memory.html">
+       b. Storage and Memory
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="number-systems.html">
+       c. Number Systems
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="algorithms-and-flowcharts.html">
+       d. Algorithms and Flowcharts
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="programming-language-levels.html">
+       e. Programming Language Levels
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="language-translators.html">
+       f. Language Translators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="operating-systems-overview.html">
+       g. Operating Systems Overview
+      </a>
+     </li>
+     <li class="py-2 px-4 font-bold text-slate-400">
+      Part II: Programming with C/C++
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="preliminaries.html">
+       a. Preliminaries
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="io-statements.html">
+       b. I/O Statements
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="expressions-and-operators.html">
+       c. Expressions and Operators
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="decision-making.html">
+       d. Decision Making
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="loops.html">
+       e. Loops
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="functions-and-calling-procedures.html">
+       f. Functions
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="recursion.html">
+       g. Recursion
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="arrays-and-pointers.html">
+       h. Arrays and Pointers
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="structure-and-union.html">
+       i. Structure and Union
+      </a>
+     </li>
+     <li>
+      <a class="block py-2 px-4 rounded hover:bg-slate-700 ml-4 transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors transition-colors" href="applications-in-mechatronics-engineering.html">
+       j. Applications in Mechatronics
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <div class="flex flex-col flex-1">
+   <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-slate-200 sticky top-0">
+    <button class="md:hidden" id="sidebar-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <h1 class="text-base md:text-xl font-semibold">
+     CSE 1287 QnA (Year 2014-2023) - Solution
+    </h1>
+    <p class="hidden md:block text-sm">
+     Generated By: Mahmud | 2308009
+    </p>
+   </header>
+   <main class="p-4 md:p-8">
+    <section id="operating-systems-overview">
+     <h3 class="text-2xl font-bold mb-8 text-center">
+      Operating Systems Overview
+     </h3>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       1. What is an operating system? Describe objectives and functions of operating system.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        An
+        <strong>
+         Operating System (OS)
+        </strong>
+        is a system software that acts as an intermediary between the computer user and the computer hardware. It manages all the hardware and software resources of the system.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Objectives:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Convenience:
+         </strong>
+         To make the computer system easier and more convenient for the user to use.
+        </li>
+        <li>
+         <strong>
+          Efficiency:
+         </strong>
+         To manage the computer's resources (CPU, memory, I/O devices) in an efficient manner.
+        </li>
+        <li>
+         <strong>
+          Abstraction:
+         </strong>
+         To hide the complex details of the hardware from the user and application programs.
+        </li>
+       </ol>
+       <h5 class="font-semibold mt-4">
+        Functions:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Process Management:
+         </strong>
+         Manages the execution of programs (processes), including creating, deleting, scheduling, and synchronizing them.
+        </li>
+        <li>
+         <strong>
+          Memory Management:
+         </strong>
+         Allocates and deallocates memory space to programs as needed, and keeps track of memory usage.
+        </li>
+        <li>
+         <strong>
+          File System Management:
+         </strong>
+         Organizes files and directories on storage devices, and controls access to them.
+        </li>
+        <li>
+         <strong>
+          Device Management:
+         </strong>
+         Manages all I/O devices through their respective drivers, handling communication between the devices and the system.
+        </li>
+        <li>
+         <strong>
+          Security:
+         </strong>
+         Provides protection for system resources against unauthorized access.
+        </li>
+        <li>
+         <strong>
+          User Interface:
+         </strong>
+         Provides a way for the user to interact with the computer, either through a Command-Line Interface (CLI) or a Graphical User Interface (GUI).
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       2. Write short notes on the following: i) Microsoft Windows OS and ii) Linux OS.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        i) Microsoft Windows OS:
+       </h5>
+       <p>
+        Microsoft Windows is a family of proprietary graphical operating systems developed and marketed by Microsoft. It is the most widely used operating system for desktop and laptop computers. Key features include its Graphical User Interface (GUI), which uses windows, icons, and menus, and its broad hardware and software compatibility ("plug and play"). It supports a vast ecosystem of applications, from productivity software to games. Windows is known for its user-friendliness but is a closed-source system, meaning its source code is not publicly available.
+       </p>
+       <h5 class="font-semibold mt-4">
+        ii) Linux OS:
+       </h5>
+       <p>
+        Linux is a family of open-source Unix-like operating systems based on the Linux kernel. It is developed collaboratively by a global community of programmers. Linux is known for its stability, security, and flexibility. It is distributed in various forms called "distributions" or "distros" (e.g., Ubuntu, Fedora, Debian), which bundle the kernel with system software and application packages. Linux dominates the server, supercomputer, and mobile (via Android) markets and is a popular choice for developers and technical users due to its powerful command-line interface and open-source nature.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       3. Write short notes on the following operating systems: i) Microsoft Windows OS ii) MS-DOS.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <h5 class="font-semibold mt-4">
+        i) Microsoft Windows OS:
+       </h5>
+       <p>
+        (See answer to question 2.i above)
+       </p>
+       <h5 class="font-semibold mt-4">
+        ii) MS-DOS (Microsoft Disk Operating System):
+       </h5>
+       <p>
+        MS-DOS was a dominant operating system for personal computers during the 1980s and early 1990s. It is a non-graphical, command-line-based operating system. Users interact with the system by typing commands at a prompt. It is a single-tasking, single-user OS, meaning it can only run one program and serve one user at a time. MS-DOS has a simple architecture and provides basic functions for file management and program execution. While now obsolete as a standalone OS, its command-line interface principles live on in the Windows Command Prompt.
+       </p>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       4. Why is LINUX preferable? Give some reasons.
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        Linux is preferable in many scenarios for several key reasons:
+       </p>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Open Source:
+         </strong>
+         Its source code is freely available for anyone to view, modify, and distribute. This fosters transparency, collaboration, and rapid innovation.
+        </li>
+        <li>
+         <strong>
+          Cost:
+         </strong>
+         Most Linux distributions and the software available for them are free of charge, making it a highly cost-effective solution.
+        </li>
+        <li>
+         <strong>
+          Security:
+         </strong>
+         The Linux architecture, with its robust user privilege model, is inherently more secure than many other operating systems. The open-source nature also means that vulnerabilities are often found and patched very quickly by the community.
+        </li>
+        <li>
+         <strong>
+          Stability and Reliability:
+         </strong>
+         Linux is renowned for its stability. It can run for years without needing a reboot, which is why it is the dominant OS for servers and critical infrastructure.
+        </li>
+        <li>
+         <strong>
+          Flexibility and Customization:
+         </strong>
+         Users can customize almost every aspect of the operating system, from the graphical interface to the kernel itself, to suit their specific needs.
+        </li>
+        <li>
+         <strong>
+          Performance:
+         </strong>
+         Linux is generally lightweight and efficient, often providing better performance than other operating systems on the same hardware, especially on older machines.
+        </li>
+       </ol>
+      </div>
+     </article>
+     <article class="mb-4">
+      <h4 class="bg-slate-200 p-4 rounded-t-lg font-bold">
+       5. What are the advantages and disadvantages of MAC operating system?
+      </h4>
+      <div class="bg-white p-4 rounded-b-lg shadow-md hidden">
+       <p>
+        macOS (formerly OS X) is the proprietary operating system developed by Apple Inc. for its Macintosh line of computers.
+       </p>
+       <h5 class="font-semibold mt-4">
+        Advantages:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          User Interface and Ease of Use:
+         </strong>
+         macOS is widely praised for its clean, intuitive, and aesthetically pleasing graphical user interface (Aqua), which provides a consistent and user-friendly experience.
+        </li>
+        <li>
+         <strong>
+          Ecosystem Integration:
+         </strong>
+         It offers seamless integration with other Apple devices like the iPhone, iPad, and Apple Watch through features like Handoff, AirDrop, and iCloud.
+        </li>
+        <li>
+         <strong>
+          Security:
+         </strong>
+         It is built on a stable and secure Unix-like foundation (BSD) and is generally considered less prone to malware and viruses compared to Windows, partly due to its smaller market share.
+        </li>
+        <li>
+         <strong>
+          Software and Hardware Optimization:
+         </strong>
+         Since Apple controls both the hardware and the software, macOS is highly optimized to run efficiently on Mac hardware, leading to excellent performance and battery life.
+        </li>
+        <li>
+         <strong>
+          Creative Professional Software:
+         </strong>
+         It is the preferred platform for many creative professionals due to the availability and performance of high-quality software for video editing, graphic design, and music production (e.g., Final Cut Pro, Logic Pro).
+        </li>
+       </ol>
+       <h5 class="font-semibold mt-4">
+        Disadvantages:
+       </h5>
+       <ol class="list-decimal list-inside">
+        <li>
+         <strong>
+          Cost and Hardware Exclusivity:
+         </strong>
+         macOS only runs on Apple's expensive Mac hardware. It cannot be legally installed on non-Apple PCs.
+        </li>
+        <li>
+         <strong>
+          Limited Hardware Customization:
+         </strong>
+         Unlike PCs, Macs offer very limited options for hardware upgrades and customization.
+        </li>
+        <li>
+         <strong>
+          Smaller Software Library:
+         </strong>
+         While it has all major applications, its overall software library, especially for specialized business software and games, is smaller than that of Windows.
+        </li>
+        <li>
+         <strong>
+          Less Gaming Support:
+         </strong>
+         The platform is generally not prioritized by game developers, leading to fewer available titles and often poorer performance compared to Windows.
+        </li>
+       </ol>
+      </div>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>
